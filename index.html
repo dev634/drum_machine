@@ -6,26 +6,27 @@
 		<title>Drum Machine</title>
 	</head>
 	<body>
+		<div class="layer"></div>
 		<div class="drummachine">
-			<div><kbd>A</kbd><span></span></div>
-			<div><kbd>Z</kbd><span></span></div>
-			<div><kbd>E</kbd><span></span></div>
-			<div><kbd>R</kbd><span></span></div>
-			<div><kbd>T</kbd><span></span></div>
-			<div><kbd>Y</kbd><span></span></div>
-			<div><kbd>U</kbd><span></span></div>
-			<div><kbd>I</kbd><span></span></div>
-			<div><kbd>O</kbd><span></span></div>
+			<div class="pad pad-1" data-key="65"><kbd>A</kbd><span></span></div>
+			<div class="pad pad-2" data-key="90"><kbd>Z</kbd><span></span></div>
+			<div class="pad pad-3" data-key="69"><kbd>E</kbd><span></span></div>
+			<div class="pad pad-4" data-key="82"><kbd>R</kbd><span></span></div>
+			<div class="pad pad-5" data-key="84"><kbd>T</kbd><span></span></div>
+			<div class="pad pad-6" data-key="89"><kbd>Y</kbd><span></span></div>
+			<div class="pad pad-7" data-key="85"><kbd>U</kbd><span></span></div>
+			<div class="pad pad-8" data-key="73"><kbd>I</kbd><span></span></div>
+			<div class="pad pad-9" data-key="79"><kbd>O</kbd><span></span></div>
 		</div>
-		<audio src="assets/sounds/boom.wav" datakey="65"></audio>
-		<audio src="assets/sounds/clap.wav" datakey="65"></audio>
-		<audio src="assets/sounds/hihat.wav" datakey="65"></audio>
-		<audio src="assets/sounds/kick.wav" datakey="65"></audio>
-		<audio src="assets/sounds/openhat.wav" datakey="65"></audio>
-		<audio src="assets/sounds/ride.wav" datakey="65"></audio>
-		<audio src="assets/sounds/snare.wav" datakey="65"></audio>
-		<audio src="assets/sounds/tink.wav" datakey="65"></audio>
-		<audio src="assets/sounds/tom.wav" datakey="65"></audio>
+		<audio src="assets/sounds/boom.wav" data-key="65"></audio>
+		<audio src="assets/sounds/clap.wav" data-key="90"></audio>
+		<audio src="assets/sounds/hihat.wav" data-key="69"></audio>
+		<audio src="assets/sounds/kick.wav" data-key="82"></audio>
+		<audio src="assets/sounds/openhat.wav" data-key="84"></audio>
+		<audio src="assets/sounds/ride.wav" data-key="89"></audio>
+		<audio src="assets/sounds/snare.wav" data-key="85"></audio>
+		<audio src="assets/sounds/tink.wav" data-key="73"></audio>
+		<audio src="assets/sounds/tom.wav" data-key="79"></audio>
 		<script src="assets/js/index.js"></script>
 	</body>
 </html>
