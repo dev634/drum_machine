@@ -18,16 +18,6 @@ function keyAction(e) {
 		document.querySelector(`audio[data-key="${e.keyCode}"]`) ||
 		document.querySelector(`audio[data-key="${e.target.dataset.key}"]`);
 
-	screen.classList.add("is-highlight");
-	setTimeout(function () {
-		screen.classList.remove("is-highlight");
-	}, 70);
-	screen.textContent = audio.currentSrc
-		.toUpperCase()
-		.split("/")
-		.pop()
-		.split(".")[0];
-
 	if (!pad) {
 		return;
 	}
@@ -37,6 +27,15 @@ function keyAction(e) {
 		return;
 	}
 
+	screen.classList.add("is-highlight");
+	setTimeout(function () {
+		screen.classList.remove("is-highlight");
+	}, 70);
+	screen.textContent = audio.currentSrc
+		.toUpperCase()
+		.split("/")
+		.pop()
+		.split(".")[0];
 	audio.currentTime = 0;
 	audio.play();
 }
