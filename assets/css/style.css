@@ -31,16 +31,23 @@ body {
 }
 
 .drummachine {
-	display: flex;
-	flex-wrap: wrap;
 	position: relative;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	width: 500px;
-	height: 500px;
+	width: 436px;
+	height: 512px;
+	padding-top: 1rem;
 	background-color: rgba(10, 10, 10, 0.9);
 	border-radius: 5px;
+}
+
+.pad-container {
+	display: flex;
+	flex-wrap: wrap;
+	width: 500px;
+	height: 500px;
+
 	padding: 1rem 0 0 1rem;
 }
 
@@ -53,20 +60,97 @@ body {
 	height: calc(100% / 3 - 1rem);
 	flex-shrink: 0;
 	background-image: radial-gradient(rgb(255, 199, 78), rgb(216, 148, 0));
-	box-shadow: 0 0 3px 0px rgb(255, 199, 78);
+	box-shadow: 0 0 6px 0px rgb(255, 199, 78);
 	margin-right: 1rem;
-	transition: all 1s ease;
+	transition: all 0.07s ease;
 }
 
 .is-playing {
-	box-shadow: 0 0 10px 0px rgb(255, 199, 78);
+	box-shadow: 0 0 15px 0px rgb(255, 199, 78);
 	transform: scale(0.95);
 	background-image: radial-gradient(rgb(216, 148, 0), rgb(255, 199, 78));
 }
 
 .pad kbd {
-	font-size: 4rem;
+	position: relative;
+	top: 32px;
+	left: 32px;
+	font-size: 3em;
 	font-weight: 600;
 	color: #dfdfdf;
 	text-shadow: 0 0 6px #202020;
+}
+
+.screen {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 3rem;
+	height: 60px;
+	width: calc(100% - 2rem);
+	margin: 0 auto 1rem auto;
+	background-color: rgba(93, 153, 4, 0.527);
+	border-radius: 3px;
+	font-family: "DS-Digital";
+	transition: all 0.07s ease-in-out;
+}
+
+.is-highlight {
+	background-image: linear-gradient(
+		90deg,
+		greenyellow,
+		rgba(93, 153, 4, 0.527),
+		rgba(93, 153, 4, 0.527),
+		greenyellow 90%
+	);
+}
+
+@media screen and (min-width: 568px) {
+	.pad-container {
+		width: 420px;
+		height: 420px;
+	}
+}
+
+@media screen and (min-width: 360px) and (max-width: 567px) {
+	.drummachine {
+		width: 340px;
+		height: 416px;
+	}
+
+	.pad-container {
+		width: 324px;
+		height: 324px;
+	}
+	.pad kbd {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 369px) {
+	.drummachine {
+		width: 300px;
+		height: 376px;
+	}
+
+	.pad-container {
+		width: 284px;
+		height: 284px;
+	}
+
+	.pad kbd {
+		display: none;
+	}
+}
+
+@font-face {
+	font-family: "DS-Digital";
+	src: url("../fonts/DS-Digital.eot");
+	src: url("../fonts/DS-Digital.eot") format("embedded-opentype"),
+		url("../fonts/DS-Digital.woff2") format("woff2"),
+		url("../fonts/DS-Digital.woff") format("woff"),
+		url("../fonts/DS-Digital.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
